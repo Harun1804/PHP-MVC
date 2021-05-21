@@ -17,7 +17,7 @@ class Mahasiswa_model extends Database {
 
     public function getMahasiswabyId($id)
     {
-        $this->db->query("SELECT * FROM ".$this->table . "WHERE id =: id");
+        $this->db->query('SELECT * FROM '.$this->table . ' WHERE id=:id');
         $this->db->bind('id',$id);
         return $this->db->single();
     }
